@@ -1,0 +1,29 @@
+---
+layout: nil
+---
+
+/*
+ * =============================================================================
+ * Siteye özel Baz CSS
+ * =============================================================================
+ */
+
+body {
+  background-color: none;
+  background-image: url('../assets/background/background.jpg');
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+}
+
+.site {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+a {
+  color:#1a2f57;
+}
+
+a:visited {
+  color:#455470;
+}
