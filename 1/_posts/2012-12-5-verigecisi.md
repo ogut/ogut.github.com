@@ -9,8 +9,8 @@ mesela var olan tabloya sütun eklemek gibi migration generatorı kullanabilirsi
 
 Bu boş ancak uygun bir şekilde isimlendirilmiş veri oluşturacak:
     class AddPartNumberToProducts < ActiveRecord::Migration
-       def change
-      end
+      def change
+        end
     end
 
 Eğer verinin ismi “AddXXXToYYY”  ve ya  “RemoveXXXFromYYY”  şeklindeyse sütun isimlerini ve türlerini listeliyor. Sonraysa add_column ve remove_coloumn oluşturuluyor.
@@ -21,10 +21,10 @@ Oluşacak :
 
 
     class AddPartNumberToProducts < ActiveRecord::Migration
-      def change
-        add_column :products, :part_number, :string
-      end
-    end
+      def change
+        add_column :products, :part_number, :string
+       end
+     end
 
 Benzer şekilde:
 
@@ -33,21 +33,21 @@ Benzer şekilde:
 Oluşturuluyor :
 
     class RemovePartNumberFromProducts < ActiveRecord::Migration
-     def up
-      remove_column :products, :part_number
-     end
+      def up
+        remove_column :products, :part_number
+      end
  
      def down
-      add_column :products, :part_number, :string
-     end
+        add_column :products, :part_number, :string
+       end
     end
 
 Kendinizi sadece bir sutun oluşturmakla sınırlamayabilirsiniz mesela :
     class AddDetailsToProducts < ActiveRecord::Migration
-     def change
-       add_column :products, :part_number, :string
-        add_column :products, :price, :decimal
-       end
+      def change
+        add_column :products, :part_number, :string
+        add_column :products, :price, :decimal
+       end
     end
 
 Her zaman sizin için oluşturulaN şey bir başlangoç noktasıdır. 
