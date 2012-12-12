@@ -56,7 +56,7 @@ Mesela gördüğünüz gibi yararlı düzenleme ile  db/migrate/YYYYMMDDHHMMSS_a
  yöntemleri kullanarak eski tarz olacak. Bunun sebebi railslerde değişikler 
 yapıldığı zaman verilerin orijinal halini bilmesi gerekmesindendir.
 
-1 TABLO OLUŞTURMAK
+1 TABLO OLUŞTURMA
 Veri geçiş metodu olan create_table kullanacağız.Tipik kullanımı:
 
       create_table :products do |t|
@@ -81,7 +81,7 @@ Varsayılan create_table başlanıç anahtar olan ‘id’ yi oluşturuyor. Siz 
 
 SQLye ENGINE=BLACKHOLE ilave edilecek yeni tablo oluşturmak için (MySQL kullandığın zaman kullanılacak olan ENGINE=InnoDB dur) 
 
-2 TABLO DEĞİŞTİRMEK
+2 TABLO DEĞİŞTİRME
 Tablo oluşturmanın en yakın akrabası tablo değiştirmektir. Ve tabloda değişiklik yapmak için kullanılıyor. Bu aynı tablo oluşturmakla aynı şekilde kullanılıyor.
  
     change_table :products do |t|
