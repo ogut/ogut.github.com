@@ -57,6 +57,7 @@ Mesela gördüğünüz gibi yararlı düzenleme ile  db/migrate/YYYYMMDDHHMMSS_a
 yapıldığı zaman verilerin orijinal halini bilmesi gerekmesindendir.
 
 1 TABLO OLUŞTURMA
+
 Veri geçiş metodu olan create_table kullanacağız.Tipik kullanımı:
 
       create_table :products do |t|
@@ -82,7 +83,8 @@ Varsayılan create_table başlanıç anahtar olan ‘id’ yi oluşturuyor. Siz 
 SQLye ENGINE=BLACKHOLE ilave edilecek yeni tablo oluşturmak için (MySQL kullandığın zaman kullanılacak olan ENGINE=InnoDB dur) 
 
 2 TABLO DEĞİŞTİRME
-Tablo oluşturmanın en yakın akrabası tablo değiştirmektir. Ve tabloda değişiklik yapmak için kullanılıyor. Bu aynı tablo oluşturmakla aynı şekilde kullanılıyor.
+
+Tablo oluşturmanın en yakın işlem tablo değiştirmektir. Ve tabloda değişiklik yapmak için kullanılıyor. Bu aynı tablo oluşturmakla aynı şekilde kullanılıyor.
  
     change_table :products do |t|
         t.remove :description, :name
@@ -93,6 +95,7 @@ Tablo oluşturmanın en yakın akrabası tablo değiştirmektir. Ve tabloda değ
 isim sütunlarını ve açıklamayı siliyor ve part_number dizgi sütunu oluşturuluyor. Ve onu index’e ilave ediyor. Sonda bu  UPCCODE sütun oluyor.
 
 3 ÖZEL YARDIMCILAR
+
 ACTİVE RECORD ortak kullanım için bazı kısayollar oluşturuyor. Bu mesela created_at ve updated_at sütunlarını birlikte oluşturmaya örnek ola bilir. Bu metod böyledir:
 
     create_table :products do |t|
