@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ASSOCİATİONS
+title:  Associations
 ---
 
 Neden modeller arasında etkileşime ihtiyaç duyarsınız ?
