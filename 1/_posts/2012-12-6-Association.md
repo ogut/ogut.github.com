@@ -32,6 +32,7 @@ Ya da bir müşteriyi silmek isteyelim aynı zaman da bu müşteriye ait bütün
     class Customer < ActiveRecord::Base
       has_many :orders, :dependent => :destroy
     end
+
  
     class Order < ActiveRecord::Base
         belongs_to :customer
@@ -45,14 +46,5 @@ Bir müşteri ve onun tüm siparişlerini silmek artık çok kolaydır :
 
     @customer.destroy
 
-ASSOCİATİONS TÜRLERİ
 
-2.3 The has_many Association
-
-Her müşteriyi ve siparişi içerir ve her bir müşteriye tam sipariş atanmasını sağlar.
-
-    class Customer < ActiveRecord::Base
-        has_many :orders
-    end
-/home/kerem/Masaüstü/belongs_to.png
 
