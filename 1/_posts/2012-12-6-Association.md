@@ -17,15 +17,16 @@ Her müşterinin birden çok siparişi olabilir. Associtions olmadan şöyle olu
 Şimdi de mevcut bir müşteri için yeni bir sipariş eklemek isteyelim.Bunun için de şöyle bişey yapmak gerekir.
 
     @order = Order.create(:order_date => Time.now,
-        :customer_id => @customer.id)
+        :customer_id => @customer.id)
 
 Ya da bir müşteriyi silmek isteyelim aynı zaman da bu müşteriye ait bütün siaprişlerinde silinmesi gerekir :
 
     @orders = Order.where(:customer_id => @customer.id)
     @orders.each do |order|
-        order.destroy
+        order.destroy
     end
-      @customer.destroy
+      
+    @customer.destroy
 
 
     class Customer < ActiveRecord::Base
@@ -33,7 +34,7 @@ Ya da bir müşteriyi silmek isteyelim aynı zaman da bu müşteriye ait bütün
     end
  
     class Order < ActiveRecord::Base
-       belongs_to :customer
+        belongs_to :customer
     end
 
 Bu değişikliklerle birlikte müşteri için yeni bir düzen oluşturmak oldukça kolaydır :
@@ -51,7 +52,7 @@ ASSOCİATİONS TÜRLERİ
 Her müşteriyi ve siparişi içerir ve her bir müşteriye tam sipariş atanmasını sağlar.
 
     class Customer < ActiveRecord::Base
-        has_many :orders
+        has_many :orders
     end
-
+/home/kerem/Masaüstü/belongs_to.png
 
